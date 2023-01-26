@@ -1,7 +1,8 @@
-package com.platzi.messages_app;
+package messagesApp;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class Conexion {
 
@@ -10,12 +11,12 @@ public class Conexion {
         Connection connection = null;
 
         try {
-            connection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3307/mensajes_app", "root", "");
+            String url = "jdbc:mysql://localhost:3307/messages_app";
+            Properties info = new Properties();
+            info.put("user", "root");
+            info.put("password", "");
+            connection = DriverManager.getConnection(url, info);
 
-            if(connection != null){
-                System.out.println("Conexión exitosa");
-            }
 
         } catch (SQLException e){
             System.out.println(e);
