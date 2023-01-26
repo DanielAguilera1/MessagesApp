@@ -9,13 +9,14 @@ public class main {
         int opcion = 0;
 
         do {
-            System.out.println("///////////////////");
+            System.out.println("-------------------------");
             System.out.println("Aplicacion de mensajes");
             System.out.println("1. Crear Mensaje");
             System.out.println("2. Listar Mensajes");
             System.out.println("3. Editar un mensaje");
             System.out.println("4. Eliminar un mensaje");
             System.out.println("5. Salir");
+            System.out.println("-------------------------");
 
             opcion = sc.nextInt();
 
